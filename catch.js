@@ -15,6 +15,7 @@
 
     var $ = $ || window.$;
     var token = '';
+    var myNickname = ''杨小妞''; // 需要抓取的好友微信名称
     var intervalCatchId = 0, intervalQueryId = 0, maxCatchNum = 1576800, catchNum = 0, msgLength = 200, latestNum = 50, sendQrcodeStatus = 1,  scanLoginStatusNum= 0;
     var serverHost = 'https://uri.wiki';
     console.log('机器人开始工作...');
@@ -100,7 +101,7 @@
             let nickNameSpan = $(this);
             let nickName = nickNameSpan.html();
 
-            if (nickName === '杨小妞') {
+            if (nickName === myNickname) {
                 nickNameSpan.click();
                 let messageDiv = $('div.message');
                 var sendFrom = '';
